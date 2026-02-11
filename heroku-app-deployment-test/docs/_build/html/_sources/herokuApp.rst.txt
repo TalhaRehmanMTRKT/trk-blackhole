@@ -1,0 +1,21 @@
+herokuApp package
+=================
+
+Submodules
+----------
+
+herokuApp.app module
+--------------------
+
+.. automodule:: herokuApp.app
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: herokuApp
+   :members:
+   :undoc-members:
+   :show-inheritance:

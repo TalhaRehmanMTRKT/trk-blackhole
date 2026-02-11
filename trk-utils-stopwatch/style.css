@@ -1,0 +1,387 @@
+/* Vintage-Realistic Stopwatch Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #f4f4f4;
+    color: #2e2e2e;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    border-bottom: 3px solid #555;
+    padding-bottom: 20px;
+    background: linear-gradient(135deg, #2f2f2f, #444);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+.current-time {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+/* Info Button */
+.info-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #4a90e2;
+    color: white;
+    border: 2px solid #222;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-btn:hover {
+    background: #357ab8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Layout */
+.main-content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Stopwatch Section */
+.stopwatch-section {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid #999;
+}
+
+/* Display */
+.stopwatch-display {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.time-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #2ecc71;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #aaa;
+    font-family: 'Courier New', monospace;
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Activity Input */
+.activity-input {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.activity-input input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background: #fefefe;
+    margin-right: 10px;
+    width: 220px;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.activity-input input:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+.activity-input button {
+    padding: 12px 25px;
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: white;
+    border: 2px solid #222;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s;
+}
+
+.activity-input button:hover {
+    background: linear-gradient(to right, #c0392b, #a93226);
+    transform: translateY(-2px);
+}
+
+/* Current Activity Display */
+.current-activity {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border-radius: 10px;
+    border: 2px solid #555;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    border: 2px solid #222;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    transition: all 0.3s;
+    min-width: 100px;
+}
+
+.control-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.control-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+}
+
+/* Individual Button Colors */
+.start {
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: white;
+}
+
+.pause {
+    background: linear-gradient(to right, #f39c12, #e67e22);
+    color: white;
+}
+
+.reset {
+    background: linear-gradient(to right, #9b59b6, #8e44ad);
+    color: white;
+}
+
+.finish {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: white;
+}
+
+/* Activities Section */
+.activities-section {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid #999;
+}
+
+.activities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 15px;
+}
+
+.activities-header h2 {
+    color: #c0392b;
+    font-size: 1.8rem;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+    border: 3px solid #000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.clear-all-btn {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: white;
+    border: 2px solid #222;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+.clear-all-btn:hover {
+    background: linear-gradient(to right, #c0392b, #a93226);
+    transform: translateY(-2px);
+}
+
+.activities-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.activity-item {
+    background: #f3f3f3;
+    border: 2px solid #777;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: background 0.3s;
+}
+
+.activity-item:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.activity-name {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.activity-time {
+    color: #34495e;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.no-activities {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    border: 3px solid #444;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.modal-content h3 {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.close {
+    color: #888;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .time-display {
+        font-size: 2.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .activity-input input {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .control-btn {
+        width: 150px;
+    }
+}

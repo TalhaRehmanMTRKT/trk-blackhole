@@ -1,0 +1,1 @@
+AAS 600 endl ADD 500 3 endl DIS endl REM 500 endl DIR
