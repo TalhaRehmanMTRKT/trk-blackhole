@@ -1,0 +1,166 @@
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: #f4f7fa;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: #1a2b47;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  border-bottom: 2px solid #34495e;
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #34495e;
+}
+
+.section {
+  background: white;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+
+.image-placeholder {
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+}
+
+.code-title {
+  font-weight: bold;
+  background: #34495e;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.3rem;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+pre {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 0.7rem 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+table.dataTable {
+  margin: 1rem auto;
+  border-collapse: collapse;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+.tab-buttons {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #2e7d32;
+  border-radius: 6px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.tab-btn:hover {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+  border-color: #1b5e20;
+}
+
+.tab-btn.active {
+  background-color: #2e7d32;
+  color: white;
+  border-color: #2e7d32;
+  box-shadow: 0 3px 8px rgba(46, 125, 50, 0.3);
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Optional subtle fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#powerflowHeatmapContainer {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: #fdfdfd;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+#powerFlowHeatmap {
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
